@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Thania Palma" />
+    <meta
+      name="description"
+      content="Destinos al rededor de los Estados Unidos"
+    />
+    <meta
+      name="keywords"
+      content="Viajero, fotos, destinos, diario, galería, viaje, país"
+    />
+    <title>Alrededor de los EE.UU.</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <img src="./images/logo_white.png" alt="Around_logo" class="logo" />
+    </header>
+    <main class="main">
+      <section class="profile">
+        <div class="profile__content">
+          <img
+            src="./images/profile_jaques.jpg"
+            alt="Foto de perfil"
+            class="profile__avatar"
+          />
+          <div class="profile__user">
+            <h1 class="profile__name">Jaques Cousteau</h1>
+            <button class="profile__edit"></button>
+            <p class="profile__job">Explorador</p>
+          </div>
+          <button class="profile__add"></button>
+        </div>
+      </section>
+      <section class="cards">
+        <div class="card">
+          <img
+            src="./images/Valle-de-Yosemite.jpg"
+            alt="Valle de Yosemite"
+            class="card__image"
+          />
+          <img src="./images/Trash_button.png" class="card__image-trash" />
+          <div class="card__image-info">
+            <p class="card__image-name">Valle de Yosemite</p>
+            <img
+              src="./images/fav_icon_inactive.png"
+              class="card__image-favorite"
+            />
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./images/Lago-Louis.jpg"
+            alt="Lago Louise"
+            class="card__image"
+          />
+          <img src="./images/Trash_button.png" class="card__image-trash" />
+          <div class="card__image-info">
+            <p class="card__image-name">Lago Louise</p>
+            <input
+              type="checkbox"
+              class="card__check-fav-invisible"
+              id="check-favorite"
+            />
+            <span class="card__check-fav-visible"></span>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./images/Montañas-calvas.jpg"
+            alt="Montañas Calvas"
+            class="card__image"
+          />
+          <img src="./images/Trash_button.png" class="card__image-trash" />
+          <div class="card__image-info">
+            <p class="card__image-name">Montañas Calvas</p>
+            <img
+              src="./images/fav_icon_inactive.png"
+              class="card__image-favorite"
+            />
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/Latemar.jpg" alt="Latemar" class="card__image" />
+          <img src="./images/Trash_button.png" class="card__image-trash" />
+          <div class="card__image-info">
+            <p class="card__image-name">Latemar</p>
+            <img
+              src="./images/fav_icon_inactive.png"
+              class="card__image-favorite"
+            />
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./images/Vanois-National-Park.jpg"
+            alt="Vanois National"
+            class="card__image"
+          />
+          <img src="./images/Trash_button.png" class="card__image-trash" />
+          <div class="card__image-info">
+            <p class="card__image-name">Vanois National</p>
+            <img
+              src="./images/fav_icon_inactive.png"
+              class="card__image-favorite"
+            />
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./images/Lago-di-Braies.jpg"
+            alt="Lago di Braies"
+            class="card__image"
+          />
+          <img src="./images/Trash_button.png" class="card__image-trash" />
+          <div class="card__image-info">
+            <p class="card__image-name">Lago di Braies</p>
+            <img
+              src="./images/fav_icon_inactive.png"
+              class="card__image-favorite"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">&copy; 2024 Thania Palma</p>
+    </footer>
+    <!--
+    <div class="popup popup__editprofile">
+      <div class="popup__overlay"></div>
+      <div class="popup__container">
+        <h2 class="popup__title">Editar Perfil</h2>
+        <input type="text" class="popup__name" placeholder="Nombre" />
+        <input type="text" class="popup__job" placeholder="Acerca de mi" />
+        <button type="submit" class="popup__save">Guardar</button>
+        <img src="./images/Close_Icon.png" class="popup__close-icon" />
+      </div>
+    </div>
+    -->
+    <div class="popup popup__addpicture">
+      <div class="popup__overlay"></div>
+      <div class="popup__container">
+        <h2 class="popup__title">Nuevo lugar</h2>
+        <input type="text" class="popup__name" placeholder="Título" />
+        <input
+          type="text"
+          class="popup__description"
+          placeholder="Dirección URL"
+        />
+        <button type="submit" class="popup__save">Crear</button>
+        <img src="./images/Close_Icon.png" class="popup__close-icon" />
+      </div>
+    </div>
+  </body>
+</html>

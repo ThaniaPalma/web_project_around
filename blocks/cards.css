@@ -1,0 +1,90 @@
+.cards {
+  width: 880px;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 18px;
+  row-gap: 21px;
+}
+
+.card {
+  position: relative;
+  background: white;
+  border-radius: 10px;
+}
+
+.card__image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  background: black;
+}
+
+.card__image-trash {
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  border: 0;
+  cursor: pointer;
+}
+
+.card__image-trash:hover {
+  opacity: 60%;
+}
+
+.card__image-info {
+  background-color: white;
+  padding: 20px 15px 30px 21px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.card__image-name {
+  margin: 0;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.card__image-favorite {
+  align-self: center;
+  width: 21px;
+  height: 19px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.card__image-favorite:hover {
+  opacity: 60%;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.card__check-fav-visible {
+  align-self: center;
+  width: 21px;
+  height: 19px;
+  background-image: url("../images/fav_icon_inactive_1x.png");
+  cursor: pointer;
+}
+
+.card__check-fav-visible:hover {
+  opacity: 60%;
+}
+
+input[type="checkbox"]:checked + span {
+  background-image: url("../images/favorite_icon_active_1x.png");
+}
