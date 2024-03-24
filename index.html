@@ -29,10 +29,10 @@
           />
           <div class="profile__user">
             <h1 class="profile__name">Jaques Cousteau</h1>
-            <button class="profile__edit"></button>
-            <p class="profile__job">Explorador</p>
+            <button class="profile__edit" id="editbutton"></button>
+            <p class="profile__about">Explorador</p>
           </div>
-          <button class="profile__add"></button>
+          <button class="profile__add" id="addbutton"></button>
         </div>
       </section>
       <section class="cards">
@@ -129,31 +129,50 @@
     <footer class="footer">
       <p class="footer__text">&copy; 2024 Thania Palma</p>
     </footer>
-    <!--
     <div class="popup popup__editprofile">
       <div class="popup__overlay"></div>
       <div class="popup__container">
         <h2 class="popup__title">Editar Perfil</h2>
-        <input type="text" class="popup__name" placeholder="Nombre" />
-        <input type="text" class="popup__job" placeholder="Acerca de mi" />
-        <button type="submit" class="popup__save">Guardar</button>
-        <img src="./images/Close_Icon.png" class="popup__close-icon" />
+        <form class="popup__form">
+          <input
+            type="text"
+            class="popup__input"
+            name="profile_name"
+            placeholder="Nombre"
+          />
+          <input
+            type="text"
+            class="popup__input"
+            name="profile_about"
+            placeholder="Acerca de mi"
+          />
+          <button type="submit" class="popup__save">Guardar</button>
+        </form>
+        <button class="popup__closebutton" id="closebutton"></button>
       </div>
     </div>
-    -->
     <div class="popup popup__addpicture">
       <div class="popup__overlay"></div>
       <div class="popup__container">
         <h2 class="popup__title">Nuevo lugar</h2>
-        <input type="text" class="popup__name" placeholder="Título" />
-        <input
-          type="text"
-          class="popup__description"
-          placeholder="Dirección URL"
-        />
-        <button type="submit" class="popup__save">Crear</button>
-        <img src="./images/Close_Icon.png" class="popup__close-icon" />
+        <form class="popup__form">
+          <input
+            type="text"
+            class="popup__input"
+            name="add_title"
+            placeholder="Título"
+          />
+          <input
+            type="text"
+            class="popup__input"
+            name="add_url"
+            placeholder="Dirección URL"
+          />
+          <button type="submit" class="popup__save">Crear</button>
+        </form>
+        <button class="popup__closebutton" id="closebutton"></button>
       </div>
     </div>
   </body>
+  <script src="./scripts/script.js"></script>
 </html>
