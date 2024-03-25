@@ -9,8 +9,12 @@ const popupCloseButton = Array.from(
 
 const formProfile = popupProfile.querySelector(".popup__form");
 const formPicture = popupPicture.querySelector(".popup__form");
-let inputProfileName = popupProfile.querySelector(".popup__input[name=name]");
-let inputProfileAbout = popupProfile.querySelector(".popup__input[name=about]");
+let inputProfileName = popupProfile.querySelector(
+  ".popup__input[name=profile_name]"
+);
+let inputProfileAbout = popupProfile.querySelector(
+  ".popup__input[name=profile_about]"
+);
 let textProfileName = document.querySelector(".profile__name");
 let textProfileAbout = document.querySelector(".profile__about");
 
