@@ -89,3 +89,34 @@
   background-position: center;
   cursor: pointer;
 }
+
+@media screen and (max-width: 779px) {
+  .popup__container {
+    padding: 22px;
+    width: 238px;
+    top: 125px;
+  }
+
+  .popup__form {
+    margin-top: 46px;
+  }
+
+  .popup__title {
+    font-size: 18px;
+  }
+
+  .popup__input {
+    font-size: 14px;
+  }
+
+  .popup__save {
+    font-size: 14px;
+  }
+  .popup__closebutton {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: -36px;
+    right: 0;
+  }
+}
