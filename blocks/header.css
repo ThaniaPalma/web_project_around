@@ -12,3 +12,16 @@
   max-width: 173px;
   height: 33px;
 }
+
+@media screen and (max-width: 779px) {
+  .header {
+    padding-top: 28px;
+    width: 320px;
+    height: 56px;
+  }
+
+  .logo {
+    max-width: 126px;
+    height: 24px;
+  }
+}

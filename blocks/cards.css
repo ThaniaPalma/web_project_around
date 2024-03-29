@@ -88,3 +88,10 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked + span {
   background-image: url("../images/favorite_icon_active_1x.png");
 }
+
+@media screen and (max-width: 779px) {
+  .cards {
+    max-width: 282px;
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,8 +1,8 @@
 .footer {
   width: 880px;
   padding-top: 65px;
-
   padding-bottom: 45px;
+  display: inline;
 }
 
 .footer__text {
@@ -10,4 +10,10 @@
   line-height: 22px;
   color: #545454;
   margin: 0;
+}
+
+@media screen and (max-width: 779px) {
+  .footer {
+    width: 282px;
+  }
 }
