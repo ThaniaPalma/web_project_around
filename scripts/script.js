@@ -1,7 +1,7 @@
 const editbutton = document.querySelector("#editbutton");
 const addbutton = document.querySelector("#addbutton");
-const popupProfile = document.querySelector(".popup__editprofile");
-const popupPicture = document.querySelector(".popup__addpicture");
+const popupProfile = document.querySelector(".popup_editprofile");
+const popupPicture = document.querySelector(".popup_addpicture");
 
 const popupCloseButton = Array.from(
   document.querySelectorAll(".popup__closebutton")
