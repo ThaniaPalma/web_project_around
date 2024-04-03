@@ -28,10 +28,12 @@
   margin: 0;
   margin-top: 16px;
   width: 373px;
-  height: 43px;
   font-weight: 500;
   font-size: 42px;
   line-height: 133%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .profile__edit {
@@ -49,7 +51,9 @@
 
 .profile__about {
   margin: 0;
-  margin-top: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .profile__add {
