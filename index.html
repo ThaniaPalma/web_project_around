@@ -35,129 +35,12 @@
           <button class="profile__add" id="addbutton">+</button>
         </div>
       </section>
-      <section class="cards">
-        <div class="card">
-          <img
-            src="./images/Valle-de-Yosemite.jpg"
-            alt="Valle de Yosemite"
-            class="card__image"
-          />
-          <img
-            src="./images/Trash_button.png"
-            class="card__image-trash"
-            alt="trash_icon"
-          />
-          <div class="card__image-info">
-            <p class="card__image-name">Valle de Yosemite</p>
-            <img
-              src="./images/fav_icon_inactive.png"
-              class="card__image-favorite"
-              alt="favorite_icon"
-            />
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/Lago-Louis.jpg"
-            alt="Lago Louise"
-            class="card__image"
-          />
-          <img
-            src="./images/Trash_button.png"
-            class="card__image-trash"
-            alt="trash_icon"
-          />
-          <div class="card__image-info">
-            <p class="card__image-name">Lago Louise</p>
-            <input
-              type="checkbox"
-              class="card__check-fav-invisible"
-              id="check-favorite"
-            />
-            <span class="card__check-fav-visible"></span>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/Montañas-calvas.jpg"
-            alt="Montañas Calvas"
-            class="card__image"
-          />
-          <img
-            src="./images/Trash_button.png"
-            class="card__image-trash"
-            alt="trash_icon"
-          />
-          <div class="card__image-info">
-            <p class="card__image-name">Montañas Calvas</p>
-            <img
-              src="./images/fav_icon_inactive.png"
-              class="card__image-favorite"
-              alt="favorite_icon"
-            />
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/Latemar.jpg" alt="Latemar" class="card__image" />
-          <img
-            src="./images/Trash_button.png"
-            class="card__image-trash"
-            alt="trash_icon"
-          />
-          <div class="card__image-info">
-            <p class="card__image-name">Latemar</p>
-            <img
-              src="./images/fav_icon_inactive.png"
-              class="card__image-favorite"
-              alt="favorite_icon"
-            />
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/Vanois-National-Park.jpg"
-            alt="Vanois National"
-            class="card__image"
-          />
-          <img
-            src="./images/Trash_button.png"
-            class="card__image-trash"
-            alt="trash_icon"
-          />
-          <div class="card__image-info">
-            <p class="card__image-name">Vanois National Park</p>
-            <img
-              src="./images/fav_icon_inactive.png"
-              class="card__image-favorite"
-              alt="favorite_icon"
-            />
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./images/Lago-di-Braies.jpg"
-            alt="Lago di Braies"
-            class="card__image"
-          />
-          <img
-            src="./images/Trash_button.png"
-            class="card__image-trash"
-            alt="trash_icon"
-          />
-          <div class="card__image-info">
-            <p class="card__image-name">Lago di Braies</p>
-            <img
-              src="./images/fav_icon_inactive.png"
-              class="card__image-favorite"
-              alt="favorite_icon"
-            />
-          </div>
-        </div>
-      </section>
+      <section class="cards"></section>
     </main>
     <footer class="footer">
       <p class="footer__text">&copy; 2024 Thania Palma</p>
     </footer>
+
     <div class="popup popup_editprofile">
       <div class="popup__overlay"></div>
       <div class="popup__container">
@@ -188,13 +71,13 @@
           <input
             type="text"
             class="popup__input"
-            name="add_title"
+            name="picture_name"
             placeholder="Título"
           />
           <input
             type="text"
             class="popup__input"
-            name="add_url"
+            name="picture_link"
             placeholder="Dirección URL"
           />
           <button type="submit" class="popup__save">Crear</button>
@@ -202,6 +85,33 @@
         <button class="popup__closebutton" id="closebutton_add"></button>
       </div>
     </div>
+    <div class="popup popup_showpicture">
+      <div class="popup__overlay"></div>
+      <img class="popup__image" src="" alt="" />
+      <p class="popup__image-name"></p>
+      <button class="popup__closebutton" id="closebutton_add"></button>
+    </div>
+
+    <template class="template">
+      <div class="card">
+        <img src="" alt="imagen template" class="card__image" />
+        <img
+          src="./images/Trash_button.png"
+          class="card__image-trash"
+          alt="trash_icon"
+        />
+        <div class="card__image-info">
+          <p class="card__image-name"></p>
+          <input
+            type="checkbox"
+            class="card__check-fav-invisible"
+            id="check-favorite"
+          />
+          <span class="card__check-fav-visible"></span>
+        </div>
+      </div>
+    </template>
+
     <script src="./scripts/script.js"></script>
   </body>
 </html>
