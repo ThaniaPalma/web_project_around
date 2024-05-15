@@ -11,16 +11,16 @@ const textProfileName = document.querySelector(".profile__name");
 const textProfileAbout = document.querySelector(".profile__about");
 
 const addbutton = document.querySelector("#addbutton");
-const popupPicture = document.querySelector(".popup_addpicture");
-const formPicture = popupPicture.querySelector(".popup__form");
-const inputPictureName = popupPicture.querySelector(
+const popupAddPicture = document.querySelector(".popup_addpicture");
+const formPicture = popupAddPicture.querySelector(".popup__form");
+const inputPictureName = popupAddPicture.querySelector(
   ".popup__input[name=picture_name]"
 );
-const inputPictureLink = popupPicture.querySelector(
+const inputPictureLink = popupAddPicture.querySelector(
   ".popup__input[name=picture_link]"
 );
 
-const popupImage = document.querySelector(".popup_showpicture");
+const popupPicture = document.querySelector(".popup_picture");
 
 const popupCloseButton = Array.from(
   document.querySelectorAll(".popup__closebutton")
@@ -70,7 +70,7 @@ editbutton.addEventListener("click", function () {
 });
 
 addbutton.addEventListener("click", function () {
-  openPopup(popupPicture);
+  openPopup(popupAddPicture);
 });
 
 popupCloseButton.forEach((button) => {
@@ -94,7 +94,7 @@ function addCard(event) {
   const cardNode = createCard(inputPictureName.value, inputPictureLink.value);
   cardsArea.prepend(cardNode);
 
-  closePopup(popupPicture);
+  closePopup(popupAddPicture);
 }
 
 formPicture.addEventListener("submit", addCard);
@@ -111,11 +111,17 @@ function createCard(name, link) {
   cardNode.querySelector(".card__image-trash").addEventListener("click", () => {
     cardNode.remove();
   });
+
+  const favbutton = cardNode.querySelector(".card__image-favorite");
+  favbutton.addEventListener("click", () => {
+    favbutton.classList.toggle("card__image-favorite_active");
+  });
+
   cardNode.querySelector(".card__image").addEventListener("click", () => {
     popupPicture.classList.toggle("popup__visible");
 
-    popupPicture.querySelector(".popup__image").src = link;
-    popupPicture.querySelector(".popup__image-name").textContent = name;
+    popupPicture.querySelector(".popup__picture-image").src = link;
+    popupPicture.querySelector(".popup__picture-title").textContent = name;
   });
 
   return cardNode;
@@ -125,50 +131,3 @@ initialCards.forEach((item) => {
   const cardNode = createCard(item.name, item.link);
   cardsArea.append(cardNode);
 });
-
-//esto funciona pero es repetitivo, falta like y falta popup imagen
-/*
-formPicture.addEventListener("submit", function (event) {
-  event.preventDefault();
-  const template = document.querySelector(".template");
-  const templateNode = template.content.querySelector(".card");
-  const cardNode = templateNode.cloneNode(true);
-
-  cardNode.querySelector(".card__image").src = inputPictureLink.value;
-  cardNode.querySelector(".card__image").alt = inputPictureName.value;
-
-  cardNode.querySelector(".card__image-name").textContent =
-    inputPictureName.value;
-
-  cardsArea.prepend(cardNode);
-
-  cardNode.querySelector(".card__image-trash").addEventListener("click", () => {
-    cardNode.remove();
-  });
-
-  closePopup(popupPicture);
-});
-
-initialCards.forEach((item) => {
-  const template = document.querySelector(".template");
-  const templateNode = template.content.querySelector(".card");
-  const cardNode = templateNode.cloneNode(true);
-
-  cardNode.querySelector(".card__image").src = item.link;
-  cardNode.querySelector(".card__image").alt = item.name;
-
-  cardNode.querySelector(".card__image-name").textContent = item.name;
-
-  cardNode.querySelector(".card__image-trash").addEventListener("click", () => {
-    cardNode.remove();
-  });
-
-  cardNode.querySelector(".card__image").addEventListener("click", () => {
-    popupPicture.classList.toggle("popup__visible");
-    popupPicture.querySelector(".popup__image").src = item.link;
-    popupPicture.querySelector(".popup__image-name").textContent = item.name;
-  });
-
-  cardsArea.append(cardNode);
-});
-*/

@@ -85,11 +85,13 @@
         <button class="popup__closebutton" id="closebutton_add"></button>
       </div>
     </div>
-    <div class="popup popup_showpicture">
+    <div class="popup popup_picture">
       <div class="popup__overlay"></div>
-      <img class="popup__image" src="" alt="" />
-      <p class="popup__image-name"></p>
+      <div class="popup__container-picture">
+        <img class="popup__picture-image" src="" alt="" />
+        <p class="popup__picture-title"></p>
       <button class="popup__closebutton" id="closebutton_add"></button>
+      </div>
     </div>
 
     <template class="template">
@@ -102,13 +104,15 @@
         />
         <div class="card__image-info">
           <p class="card__image-name"></p>
+          <button class="card__image-favorite" id="favoritebutton">
+<!--
           <input
             type="checkbox"
-            class="card__check-fav-invisible"
+            class="card__image-favorite"
             id="check-favorite"
           />
           <span class="card__check-fav-visible"></span>
-        </div>
+        </div> -->
       </div>
     </template>
 

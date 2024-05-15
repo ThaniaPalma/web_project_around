@@ -20,6 +20,7 @@
   object-fit: fill;
   border-radius: 10px 10px 0 0;
   background: black;
+  cursor: pointer;
 }
 
 .card__image-trash {
@@ -61,6 +62,11 @@
   align-self: center;
   width: 21px;
   height: 19px;
+  background-image: url("../images/fav_icon_inactive_1x.png");
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 0;
   border: 0;
   cursor: pointer;
@@ -70,27 +76,7 @@
   opacity: 60%;
 }
 
-input[type="checkbox"] {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-}
-
-.card__check-fav-visible {
-  align-self: center;
-  width: 21px;
-  height: 19px;
-  background-image: url("../images/fav_icon_inactive_1x.png");
-  cursor: pointer;
-}
-
-.card__check-fav-visible:hover {
-  opacity: 60%;
-}
-
-input[type="checkbox"]:checked + span {
+.card__image-favorite_active {
   background-image: url("../images/favorite_icon_active_1x.png");
 }
 
