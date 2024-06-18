@@ -151,6 +151,13 @@
   .popup__save {
     font-size: 14px;
   }
+
+  .popup__input-error_active {
+    width: 238px;
+    font-size: 10px;
+    line-height: 10px;
+  }
+
   .popup__closebutton {
     width: 23px;
     height: 23px;
