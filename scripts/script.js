@@ -63,14 +63,35 @@ function closePopup(popup) {
   popup.classList.remove("popup__visible");
 }
 
+const overlayElement = Array.from(document.querySelectorAll(".popup__overlay"));
+
+overlayElement.forEach((overlay) => {
+  overlay.addEventListener("click", function () {
+    const popup = overlay.closest(".popup");
+    closePopup(popup);
+  });
+});
+
 editbutton.addEventListener("click", function () {
   openPopup(popupProfile);
   inputProfileName.value = textProfileName.textContent;
   inputProfileAbout.value = textProfileAbout.textContent;
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closePopup(popupProfile);
+    }
+  });
 });
 
 addbutton.addEventListener("click", function () {
   openPopup(popupAddPicture);
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closePopup(popupAddPicture);
+    }
+  });
 });
 
 popupCloseButton.forEach((button) => {

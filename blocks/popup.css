@@ -55,8 +55,23 @@
   border-bottom: 1px solid;
 }
 
+.popup__input-error {
+  height: 27px;
+  border-bottom: 1px solid red;
+}
+
 .popup__input::placeholder {
   opacity: 25%;
+}
+
+.popup__input-error_active {
+  color: red;
+  font-size: 12px;
+  margin-top: 6px;
+  opacity: 1;
+  position: absolute;
+  width: 350px;
+  line-height: 12px;
 }
 
 .popup__save {
@@ -73,6 +88,12 @@
 
 .popup__save:hover {
   opacity: 80%;
+}
+
+.popup__save-disabled {
+  color: #b8b8b8;
+  background-color: white;
+  pointer-events: none;
 }
 
 .popup__closebutton {

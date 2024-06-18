@@ -45,20 +45,36 @@
       <div class="popup__overlay"></div>
       <div class="popup__container">
         <h2 class="popup__title">Editar Perfil</h2>
-        <form class="popup__form">
+        <form class="popup__form" novalidate>
           <input
+            id="profileName-input"
             type="text"
             class="popup__input"
             name="profile_name"
             placeholder="Nombre"
+            minlength="2"
+            maxlength="40"
+            required
           />
+          <span
+            class="popup__input-error_active profileName-input-error"
+          ></span>
           <input
+            id="profileAbout-input"
             type="text"
             class="popup__input"
             name="profile_about"
             placeholder="Acerca de mi"
+            minlength="2"
+            maxlength="200"
+            required
           />
-          <button type="submit" class="popup__save">Guardar</button>
+          <span
+            class="popup__input-error_active profileAbout-input-error"
+          ></span>
+          <button type="submit" class="popup__submit popup__save">
+            Guardar
+          </button>
         </form>
         <button class="popup__closebutton" id="closebutton_edit"></button>
       </div>
@@ -67,20 +83,28 @@
       <div class="popup__overlay"></div>
       <div class="popup__container">
         <h2 class="popup__title">Nuevo lugar</h2>
-        <form class="popup__form">
+        <form class="popup__form" novalidate>
           <input
+            id="imageTitle-input"
             type="text"
             class="popup__input"
             name="picture_name"
             placeholder="Título"
+            minlength="2"
+            maxlength="30"
+            required
           />
+          <span class="popup__input-error_active imageTitle-input-error"></span>
           <input
-            type="text"
+            id="imageUrl-input"
+            type="url"
             class="popup__input"
             name="picture_link"
             placeholder="Dirección URL"
+            required
           />
-          <button type="submit" class="popup__save">Crear</button>
+          <span class="popup__input-error_active imageUrl-input-error"></span>
+          <button type="submit" class="popup__submit popup__save">Crear</button>
         </form>
         <button class="popup__closebutton" id="closebutton_add"></button>
       </div>
@@ -110,5 +134,6 @@
     </template>
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>
