@@ -64,7 +64,7 @@
   opacity: 25%;
 }
 
-.popup__input-error_active {
+.popup__input-error-active {
   color: red;
   font-size: 12px;
   margin-top: 6px;
@@ -152,7 +152,7 @@
     font-size: 14px;
   }
 
-  .popup__input-error_active {
+  .popup__input-error-active {
     width: 238px;
     font-size: 10px;
     line-height: 10px;
